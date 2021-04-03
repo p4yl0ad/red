@@ -19,7 +19,7 @@ function FodhelperBypass(){
  
 Param (    
  
- [String]$program = "cmd /c echo whoami /all > C:\fodhelper.txt" 
+ [String]$program = "cmd /c whoami /all > C:\fodhelper.txt" 
  
       )
  

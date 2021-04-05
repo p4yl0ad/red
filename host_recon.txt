@@ -1,0 +1,17 @@
+echo %userdomain
+%echo %logonserver
+%echo %homepath
+%echo %homedrive
+%net share
+net accounts
+systeminfo
+tasklist /svc
+gpresult /z
+net localgroup Administrators 
+netsh advfirewall show allprofilesstate
+systeminfo 
+$env:ComSpec
+$env:USERNAME
+$env:USERDOMAIN
+$env:LOGONSERVER
+Tree $home 

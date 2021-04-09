@@ -14,6 +14,7 @@ exploit -j
 #SOCKS
 use auxiliary/server/socks_proxy
 set VERSION 4a
+set SRVPORT 1080
 exploit -j
 
 

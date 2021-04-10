@@ -34,3 +34,11 @@ git clone https://github.com/yck1509/ConfuserEx.git
 
 Ez clap 
 18/67 VT hitrate
+
+
+
+
+Current Users SID no whoami /all:
+cmd.exe /c wmic useraccount where name='%username%' get sid
+Covenant:
+shellcmd wmic useraccount where name='%username%' get sid

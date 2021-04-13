@@ -42,3 +42,8 @@ Current Users SID no whoami /all:
 cmd.exe /c wmic useraccount where name='%username%' get sid
 Covenant:
 shellcmd wmic useraccount where name='%username%' get sid
+
+
+
+SI 0 -> SI >=1
+https://github.com/antonioCoco/RunasCs

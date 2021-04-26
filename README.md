@@ -47,3 +47,8 @@ shellcmd wmic useraccount where name='%username%' get sid
 
 SI 0 -> SI >=1
 https://github.com/antonioCoco/RunasCs
+
+
+*****
+[System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("C:\Users\IEUser\Desktop\golden.kirbi"))
+

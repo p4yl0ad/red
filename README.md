@@ -50,5 +50,6 @@ https://github.com/antonioCoco/RunasCs
 
 
 *****
-[System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("C:\Users\IEUser\Desktop\golden.kirbi"))
+
+`[System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("C:\Users\IEUser\Desktop\golden.kirbi"))`
 

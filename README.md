@@ -53,3 +53,19 @@ https://github.com/antonioCoco/RunasCs
 
 `[System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("C:\Users\IEUser\Desktop\golden.kirbi"))`
 
+
+```
+$Username="Hugo"
+$Password="abcdefgh"
+$WebProxy = New-Object System.Net.WebProxy("http://webproxy:8080",$true)
+$url="http://aaa.bbb.ccc.ddd/rss.xml"
+
+$WebClient = New-Object net.webclient
+
+$WebClient.Proxy=$webproxy
+$WebClient.proxy.Credentials = New-Object System.Net.NetworkCredential($Username, $Password)
+$path="C:\Users\hugo\xml\test.xml"
+$WebClient.DownloadFile($url, $path)
+
+```
+

@@ -31,9 +31,10 @@ git clone https://github.com/yck1509/ConfuserEx.git
 ****
 
 **Byte array for combo with shellc loader**
+```powershell
 $bytes = [System.IO.File]::ReadAllBytes("Grunt.bin");
 $bytes -join ","
-
+```
 
 ****
 

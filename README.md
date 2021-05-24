@@ -49,6 +49,14 @@ git clone https://github.com/yck1509/ConfuserEx.git
 
 
 ****
+DPAPI
+$exfil = Get-Content -Path C:\Users\Public\Downloads\oof.txt | ConvertTo-SecureString ; [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR((($exfil))))
+
+Import-Module .\FileCryptography.psm1
+$key = 'AhXpFs[...REDACTED...]LxlUqc0Y='
+Unprotect-File .\exfil.txt.AES AES $key
+****
+
 
 **Byte array for combo with shellc loader**
 ```powershell

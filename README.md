@@ -1,5 +1,5 @@
 # CRTO_Notes
-Collection of things used for CRTO that might be useful
+Collection of red team things used for CRTO that might be useful
 
 
 ****

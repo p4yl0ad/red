@@ -1,5 +1,6 @@
 # CRTO_Notes
 Collection of red team things used for CRTO that might be useful
+https://www.zeropointsecurity.co.uk/red-team-ops
 
 
 ****

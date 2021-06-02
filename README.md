@@ -17,6 +17,55 @@ $Shortcut.Save()
 
 ****
 
+https://offensivedefence.co.uk/posts/covenant-profiles-templates/
+
+```csharp
+//stager mods
+public static string GetMessageFormat
+{
+         get
+         {
+                  var sb = new StringBuilder(@"{{""GUID"":""{0}"",");
+                  sb.Append(@"""Type"":{1},");
+                  sb.Append(@"""Meta"":""{2}"",");
+                  sb.Append(@"""IV"":""{3}"",");
+                  sb.Append(@"""EncryptedMessage"":""{4}"",");
+                  sb.Append(@"""HMAC"":""{5}""}}");
+                  return sb.ToString();
+         }
+}
+                  
+//then                  
+string MessageFormat = GetMessageFormat;
+```
+
+```csharp
+//executor mods
+private static string EncryptedMessageFormat
+{
+         get
+         {
+                  var sb = new StringBuilder(@"{{""GUID"":""{0}"",");
+                  sb.Append(@"""Type"":{1},");
+                  sb.Append(@"""Meta"":""{2}"",");
+                  sb.Append(@"""IV"":""{3}"",");
+                  sb.Append(@"""EncryptedMessage"":""{4}"",");
+                  sb.Append(@"""HMAC"":""{5}""}}");
+                  return sb.ToString();
+         }
+}
+//then
+private static string GruntEncryptedMessageFormat = EncryptedMessageFormat;
+
+```
+
+
+
+
+
+
+****
+
 Browser D33ts:
 https://github.com/rvrsh3ll/Misc-Powershell-Scripts/blob/master/Get-BrowserData.ps1
 ```

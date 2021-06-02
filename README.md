@@ -2,6 +2,7 @@
 Collection of red team things used for CRTO that might be useful
 https://www.zeropointsecurity.co.uk/red-team-ops
 
+Mix of homebrew / others tooling, very much a personally curated collection of references to copy and paste.
 
 ****
 Shortcut with powershell

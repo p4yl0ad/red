@@ -21,3 +21,10 @@ hashcat -m 1000 -a 0 Hashdump.txt -o Cracked.txt /opt/SecLists/Passwords/Leaked-
 hashcat -m 1000 -a 0 Hashdump.txt -o Cracked-otrta.txt /opt/SecLists/Passwords/Leaked-Databases/rockyou.txt -r /usr/share/hashcat/rules/otrta.rule
 
 hashcat -m 1000 -a 3 --custom-charset1=?l?d?u --username -o cracked.txt .\Hashdump.txt ?1?1?1?1?1?1?1?1
+
+
+**Ran out of options:**
+```
+hashcat -m 13100 -a 0 --outfile hashnamecracked.txt hash.txt /opt/SecLists/Passwords/*.txt --force -r
+/usr/share/hashcat/rules/best64.rule
+```

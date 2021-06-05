@@ -36,6 +36,39 @@ $env:LOGONSERVER
 tree $home 
 ```
 
+***
+Obfus
+https://antiscan.me/images/result/Mm36m1tv5sYN.png
+
+https://labs.f-secure.com/tools/sharpgpoabuse/
+https://github.com/FSecureLABS/SharpGPOAbuse
+https://mkaring.github.io/ConfuserEx/
+https://github.com/mkaring/ConfuserEx.git
+
+
+```
+<project outputDir="C:\tools\SharpGPOAbuse\SharpGPOAbuse\bin\Release\CONFUSED" baseDir="C:\tools\SharpGPOAbuse\SharpGPOAbuse\bin\Release\" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true">
+    <protection id="anti debug" />
+    <protection id="anti dump" />
+    <protection id="anti ildasm" />
+    <protection id="anti tamper" />
+    <protection id="constants" />
+    <protection id="ctrl flow" />
+    <protection id="invalid metadata" />
+    <protection id="ref proxy" />
+    <protection id="resources" />
+  </rule>
+  <module path="C:\tools\SharpGPOAbuse\SharpGPOAbuse\bin\Release\SharpGPOAbuse.exe">
+    <rule pattern="true" preset="maximum" inherit="false" />
+  </module>
+  <module path="..\..\..\packages\CommandLineParser.1.9.3.15\lib\CommandLine.dll">
+    <rule pattern="true" preset="maximum" inherit="false" />
+  </module>
+  <probePath>C:\tools\SharpGPOAbuse\SharpGPOAbuse\bin\Release\</probePath>
+</project>
+```
+
 
 
 ***

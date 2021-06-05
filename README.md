@@ -14,6 +14,31 @@ https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
 
 
 ***
+
+**Quieter Host Recon:**
+```
+echo %userdomain
+%echo %logonserver
+%echo %homepath
+%echo %homedrive
+%net share
+net accounts
+systeminfo
+tasklist /svc
+gpresult /z
+net localgroup Administrators 
+netsh advfirewall show allprofilesstate
+systeminfo 
+$env:ComSpec
+$env:USERNAME
+$env:USERDOMAIN
+$env:LOGONSERVER
+tree $home 
+```
+
+
+
+***
 SharpLoader
 https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader
 

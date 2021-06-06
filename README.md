@@ -1,19 +1,24 @@
 # CRTO_Notes
-Collection of red team things used for CRTO that might be useful
-https://www.zeropointsecurity.co.uk/red-team-ops
+Collection of red team things used in labs and courses that might be useful
+
+- https://www.zeropointsecurity.co.uk/red-team-ops
+- https://www.hackthebox.eu/newsroom/prolab-rastalabs
 
 Mix of homebrew / others tooling, very much a curated collection of references to copy and paste.
 
 
 Fucking great ippsec like dashlane search 
-https://vysecurity.rocks/?#
+- https://vysecurity.rocks/?#
 
 
 Poggy simple sig based evasion
-https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
+- https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
 
 Traffic smuggling / evasion 
-https://offensivedefence.co.uk/posts/covenant-profiles-templates/
+- https://offensivedefence.co.uk/posts/covenant-profiles-templates/
+
+EoP file write
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md#eop---privileged-file-write
 
 ***
 

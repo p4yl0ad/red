@@ -20,6 +20,9 @@ Traffic smuggling / evasion
 EoP file write
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md#eop---privileged-file-write
 
+Yes
+- https://media.discordapp.net/attachments/716539014563364905/851058875448819712/7d9b377d640adc0j80gv.png?width=552&height=484
+
 ***
 
 **Quieter Host Recon:**

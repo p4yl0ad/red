@@ -12,6 +12,8 @@ https://vysecurity.rocks/?#
 Poggy simple sig based evasion
 https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
 
+Traffic smuggling / evasion 
+https://offensivedefence.co.uk/posts/covenant-profiles-templates/
 
 ***
 

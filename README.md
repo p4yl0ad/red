@@ -46,6 +46,16 @@ $env:LOGONSERVER
 tree $home 
 ```
 
+****
+
+
+**Quieter exec:**
+- powershell ([char]45+[char]101+[char]99) YwBhAGwAYwA=
+
+
+
+
+
 ***
 Obfus
 - https://antiscan.me/images/result/Mm36m1tv5sYN.png

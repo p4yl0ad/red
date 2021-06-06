@@ -48,12 +48,12 @@ tree $home
 
 ***
 Obfus
-https://antiscan.me/images/result/Mm36m1tv5sYN.png
+- https://antiscan.me/images/result/Mm36m1tv5sYN.png
 
-https://labs.f-secure.com/tools/sharpgpoabuse/
-https://github.com/FSecureLABS/SharpGPOAbuse
-https://mkaring.github.io/ConfuserEx/
-https://github.com/mkaring/ConfuserEx.git
+- https://labs.f-secure.com/tools/sharpgpoabuse/
+- https://github.com/FSecureLABS/SharpGPOAbuse
+- https://mkaring.github.io/ConfuserEx/
+- https://github.com/mkaring/ConfuserEx.git
 
 
 ```
@@ -83,7 +83,7 @@ https://github.com/mkaring/ConfuserEx.git
 
 ***
 SharpLoader
-https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader
+- https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader
 
 
 1. RUN https://github.com/the-xentropy/xencrypt on the loader to drop to a CIFS share on prem
@@ -122,8 +122,8 @@ Set-DomainUserPassword -Identity Domain_Admin_username -Password $pass -Credenti
 ```
 ***
 
-#https://www.dsinternals.com/en/
-#https://attack.stealthbits.com/ntds-dit-security-active-directory
+- https://www.dsinternals.com/en/
+- https://attack.stealthbits.com/ntds-dit-security-active-directory
 
 ```powershell
 Compress-Archive -Path C:\Users\Public\Downloads\poon -DestinationPath C:\Users\Public\Downloads\poon.zip
@@ -177,7 +177,7 @@ $Shortcut.Save()
 
 ****
 
-https://offensivedefence.co.uk/posts/covenant-profiles-templates/
+- https://offensivedefence.co.uk/posts/covenant-profiles-templates/
 
 ```csharp
 //stager mods
@@ -227,7 +227,7 @@ private static string GruntEncryptedMessageFormat = EncryptedMessageFormat;
 ****
 
 Browser D33ts:
-https://github.com/rvrsh3ll/Misc-Powershell-Scripts/blob/master/Get-BrowserData.ps1
+- https://github.com/rvrsh3ll/Misc-Powershell-Scripts/blob/master/Get-BrowserData.ps1
 ```
 (crto_cov) > powershell Get-BrowserData -Browser All
 
@@ -306,8 +306,8 @@ shellcmd wmic useraccount where name='%username%' get sid
 
 
 
-SI 0 -> SI >=1
-https://github.com/antonioCoco/RunasCs
+SI 0 -> SI >=1?
+- https://github.com/antonioCoco/RunasCs
 
 
 *****

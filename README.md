@@ -25,6 +25,13 @@ Yes
 
 ***
 
+Subnet mask / CIDR / IPV4 Calculator
+- https://www.adminsub.net/ipv4-subnet-calculator/10.10.120.0/255.255.254.0
+
+
+***
+
+
 **Quieter Host Recon:**
 ```
 echo %userdomain

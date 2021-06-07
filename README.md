@@ -358,3 +358,16 @@ $WebClient.DownloadFile($url, $path)
 
 ```
 
+***
+
+weird file permissions:
+```powershell
+$path = C:\Users\administrator\Desktop\secrets.txt
+$acl=get-acl $path
+$accessrule = New-Object system.security.AccessControl.FileSystemAccessRule("DOMAIN\user.name","Read",,,"Allow")
+$acl.RemoveAccessRuleAll($accessrule)
+Set-Acl -Path $path -AclObject $acl
+```
+
+
+

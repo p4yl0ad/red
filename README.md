@@ -374,6 +374,9 @@ $accessrule = New-Object system.security.AccessControl.FileSystemAccessRule("DOM
 $acl.RemoveAccessRuleAll($accessrule)
 Set-Acl -Path $path -AclObject $acl
 ```
-
+Or
+```powershell
+get-acl C:\Users\administrator\Desktop\desktop.ini | Set-Acl C:\Users\administrator\Desktop\secrets.txt
+```
 
 

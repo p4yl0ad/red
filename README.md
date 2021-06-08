@@ -90,6 +90,7 @@ Capping hashes from beachhead:
 **Obfuscation, patching and evasion**
 
 Just read these blogs , trust me.
+- https://rastamouse.me/memory-patching-amsi-bypass/
 - https://labs.f-secure.com/blog/attack-detection-fundamentals-2021-windows-lab-1/
 - https://labs.f-secure.com/blog/attack-detection-fundamentals-2021-windows-lab-2/
 

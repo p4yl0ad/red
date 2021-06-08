@@ -22,6 +22,13 @@ Poggy simple sig based evasion
 Traffic smuggling / evasion 
 - https://offensivedefence.co.uk/posts/covenant-profiles-templates/
 
+AMSI/AV
+- https://rastamouse.me/memory-patching-amsi-bypass/
+
+Shellcode runners C/C++ very  c h i n a
+- https://uknowsec.cn/posts/notes/shellcode%E5%8A%A0%E8%BD%BD%E6%80%BB%E7%BB%93.html
+
+
 EoP file write
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md#eop---privileged-file-write
 
@@ -76,13 +83,6 @@ Capping hashes from beachhead:
 - powershell ([char]45+[char]101+[char]99) YwBhAGwAYwA=
 
 
-
-
-
-***
-**Shellcode runners C/C++ :**
-**c h i n a**
-- https://uknowsec.cn/posts/notes/shellcode%E5%8A%A0%E8%BD%BD%E6%80%BB%E7%BB%93.html
 
 
 

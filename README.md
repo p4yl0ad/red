@@ -81,7 +81,7 @@ Capping hashes from beachhead:
 
 ***
 **Shellcode runners C/C++ :**
-** c h i n a **
+**c h i n a**
 - https://uknowsec.cn/posts/notes/shellcode%E5%8A%A0%E8%BD%BD%E6%80%BB%E7%BB%93.html
 
 

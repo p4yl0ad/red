@@ -158,8 +158,7 @@ Import-Module .\PowerView.ps1
 $Username = 'administrator'
 $Password = 'peepeepoopoo'
 $pass = ConvertTo-SecureString -AsPlainText $Password -Force
-$Cred = New-Object System.Management.Automation.PSCredential -ArgumentList
-$Username,$pass
+$Cred = New-Object System.Management.Automation.PSCredential -ArgumentList $Username,$pass
 Set-DomainUserPassword -Identity Domain_Admin_username -Password $pass -Credential $Cred
 ```
 ***
@@ -213,7 +212,7 @@ do
 done
 ```
 
-```
+```bash
 #!/bin/bash
 
 list=$(find /opt/SecLists/Passwords -type f | grep -i ".txt")
@@ -234,7 +233,7 @@ done
 
 ****
 Shortcut with powershell
-```
+```powershell
 $TargetFile = "$env:SystemRoot\System32\calc.exe"
 $ShortcutFile = "C:\experiments\cpl\calc.lnk"
 $WScriptShell = New-Object -ComObject WScript.Shell

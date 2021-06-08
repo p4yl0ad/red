@@ -187,6 +187,32 @@ hashcat -m 13100 -a 0 --outfile hashnamecracked.txt hash.txt /opt/SecLists/Passw
 /usr/share/hashcat/rules/best64.rule
 ```
 
+```bash
+#!/bin/bash
+
+list=$(find /opt/SecLists/Passwords -type f | grep -i ".txt")
+
+for file in $list
+do
+	echo $file
+	hashcat -m 1000 -a 0 -O -w 3 --outfile cracked-hashes.txt hashes.txt $file --force -r /usr/share/hashcat/rules/best64.rule
+done
+```
+
+```
+#!/bin/bash
+
+list=$(find /opt/SecLists/Passwords -type f | grep -i ".txt")
+
+for file in $list
+do
+	echo $file
+	hashcat -m 1000 -a 0 -O -w 3 --outfile cracked-hashes.txt hashes.txt $file --force -r /usr/share/hashcat/rules/otrta.rule
+done
+```
+
+
+
 
 ***
 

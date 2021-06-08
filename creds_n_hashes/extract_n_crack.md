@@ -32,3 +32,7 @@ hashcat -m 13100 -a 0 --outfile hashnamecracked.txt hash.txt /opt/SecLists/Passw
 ```
  hashcat -m 1000 -a 0 -O -w 3 --outfile cracked-hashes.txt hashes.txt /opt/SecLists/Passwords/Leaked-Databases/*.txt --force -r /usr/share/hashcat/rules/best64.rule
 ```
+
+```
+ hashcat -m 1000 -a 0 -O -w 3 --outfile cracked-hashes.txt hashes.txt /opt/SecLists/Passwords/*.txt --force -r /usr/share/hashcat/rules/otrta.rule
+```

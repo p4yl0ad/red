@@ -11,6 +11,11 @@ Fucking great ippsec like dashlane search
 - https://vysecurity.rocks/?#
 
 
+rockyou2021 link
+- https://pastebin.com/HmgmWh20
+
+
+
 Poggy simple sig based evasion
 - https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
 

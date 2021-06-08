@@ -80,16 +80,25 @@ Capping hashes from beachhead:
 
 
 ***
-Obfus
-- https://antiscan.me/images/result/Mm36m1tv5sYN.png
+**Obfuscation, patching and evasion**
 
+Just read these blogs , trust me.
+- https://labs.f-secure.com/blog/attack-detection-fundamentals-2021-windows-lab-1/
+- https://labs.f-secure.com/blog/attack-detection-fundamentals-2021-windows-lab-2/
+
+
+
+**Cleaning SharpGPOAbuse:**
+
+- https://antiscan.me/images/result/Mm36m1tv5sYN.png
 - https://labs.f-secure.com/tools/sharpgpoabuse/
 - https://github.com/FSecureLABS/SharpGPOAbuse
 - https://mkaring.github.io/ConfuserEx/
 - https://github.com/mkaring/ConfuserEx.git
 
 
-```
+oof.crproj
+```csproj
 <project outputDir="C:\tools\SharpGPOAbuse\SharpGPOAbuse\bin\Release\CONFUSED" baseDir="C:\tools\SharpGPOAbuse\SharpGPOAbuse\bin\Release\" xmlns="http://confuser.codeplex.com">
   <rule pattern="true">
     <protection id="anti debug" />

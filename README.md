@@ -65,6 +65,10 @@ $env:LOGONSERVER
 tree $home 
 ```
 
+***
+Get-EventLog -LogName "Application" | where {$_.Message -like '*username*' -or $_.Message -like '*password*' -or $_.Message -like '*pass*'} | select Message | format-table -wrap
+
+
 ****
 
 Capping hashes from beachhead:

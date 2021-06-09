@@ -40,6 +40,11 @@ exploit -j
 
 
 
+#EXPLOITS
+#setg Proxies socks4:127.0.0.1:1080
+
+
+
 #Generate an x64 bind TCP Meterpreter payload using msfconsole or msfvenom and output to .ps1 using the psh-net format type.
 #prtfwd
 #use exploit/multi/handler

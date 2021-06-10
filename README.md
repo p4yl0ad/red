@@ -10,14 +10,21 @@ Collection of red team things used in labs and courses that might be useful
 Mix of homebrew / others tooling, very much a curated collection of references to copy and paste.
 
 
+Fanboy moment:
+- https://github.com/grugq 
+- https://github.com/chryzsh
+- https://github.com/HarmJ0y
+- https://github.com/rasta-mouse
+- https://github.com/TheWover
+- https://github.com/byt3bl33d3r
+- https://github.com/jfmaes
+
+
 Fucking great ippsec like dashlane search 
 - https://vysecurity.rocks/?#
 
-
 rockyou2021 link
 - https://pastebin.com/HmgmWh20
-
-
 
 Poggy simple sig based evasion
 - https://luemmelsec.github.io/Circumventing-Countermeasures-In-AD/
@@ -30,7 +37,6 @@ AMSI/AV
 
 Shellcode runners C/C++ very  c h i n a
 - https://uknowsec.cn/posts/notes/shellcode%E5%8A%A0%E8%BD%BD%E6%80%BB%E7%BB%93.html
-
 
 EoP file write
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md#eop---privileged-file-write
@@ -81,16 +87,11 @@ Capping hashes from beachhead:
 . .\Inveigh-OBFUSCATED.ps1;Invoke-Inveigh -ConsoleOutput Y -Elevated N -FileOutput Y -FileOutputDirectory C:\software\.poon -FileUnique Y
 ```
 
-
-
 ****
 
 
 **Quieter exec:**
 - powershell ([char]45+[char]101+[char]99) YwBhAGwAYwA=
-
-
-
 
 
 ***

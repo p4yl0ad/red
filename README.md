@@ -169,6 +169,29 @@ Invoke-SharpLoader -location C:\EncryptedCSharp\Rubeus.enc -password S3cur3Th1sS
 ```
 
 ***
+https://adsecurity.org/?p=2604
+```powershell
+## Malware
+function SuperDecrypt
+{
+param($script)
+$bytes = [Convert]::FromBase64String($script)
+## XOR “encryption”
+$xorKey = 0x42
+for($counter = 0; $counter -lt $bytes.Length; $counter++)
+{
+$bytes[$counter] = $bytes[$counter] -bxor $xorKey
+}
+[System.Text.Encoding]::Unicode.GetString($bytes)
+}
+$decrypted = SuperDecrypt “FUIwQitCNkInQm9CCkItQjFCNkJiQmVCEkI1QixCJkJlQg==”
+Invoke-Expression $decrypted
+```
+
+
+
+
+***
 ```powershell
 Import-Module .\PowerView.ps1
 $Username = 'administrator'

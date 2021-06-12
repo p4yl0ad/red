@@ -78,6 +78,14 @@ tree $home
 Get-EventLog -LogName "Application" | where {$_.Message -like '*username*' -or $_.Message -like '*password*' -or $_.Message -like '*pass*'} | select Message | format-table -wrap
 
 
+
+****
+
+Sticky notes
+```powershell
+ls $env:LocalAppData\Packages\Microsoft.MicrosoftStickyNotes_XXXXXXXXXXXXXXXXXX\LocalState
+```
+
 ****
 
 Capping hashes from beachhead:

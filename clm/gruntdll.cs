@@ -13,9 +13,7 @@ using RGiesecke.DllExport;
 
 namespace GruntStager
 {
-    namespace GruntStager
-    {
-        public class GruntStager
+    public class GruntStager
         {
             public GruntStager()
             {
@@ -284,7 +282,6 @@ namespace GruntStager
             }
 
         }
-    }
     public class Exports
     {
         [DllExport("GruntEntry", CallingConvention = CallingConvention.Cdecl)]

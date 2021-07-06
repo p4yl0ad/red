@@ -516,13 +516,23 @@ get-acl C:\Users\administrator\Desktop\desktop.ini | Set-Acl C:\Users\administra
 
 
 
-Digging into DCOM
+**Digging into DCOM**
+
 - https://bohops.com/2018/04/28/abusing-dcom-for-yet-another-lateral-movement-technique/
 - https://www.howtogeek.com/howto/8668/what-is-mobsync.exe-and-why-is-it-running/
+- https://www.mdsec.co.uk/2020/09/i-like-to-move-it-windows-lateral-movement-part-2-dcom/
 
+
+```powershell
+Get-CimInstance -class Win32-DCOMApplication | select appid,name
+$obj = [activator]::CreateInstance([type]::GetTypeFromCLSID("C947D50F-378E-4FF6-8835-FCB50305244D"))
+$obj | get-member
+```
 
 - gwmi Win32_COMSetting -computername 127.0.0.1 | ft LocalServer32 -autosize | Out-String -width 4096 | out-file dcom_exes.txt
 - gwmi Win32_COMSetting -computername 127.0.0.1 | ft InProcServer32 -autosize | Out-String -width 4096 | out-file dcom_dlls.txt
+
+
 ```
 $file = gc C:\Users\test\desktop\dcom_things.txt
 foreach ($binpath in $file) {

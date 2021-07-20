@@ -67,6 +67,8 @@ DDE's
 
 ***
 
+
+
 **Quieter Host Recon:**
 ```
 #cmd.exe
@@ -90,6 +92,11 @@ $env:USERDOMAIN
 $env:LOGONSERVER
 tree /f $home 
 ```
+
+
+**writing to disk**
+mkdir C:\Software & attrib +h c:\Software
+
 
 
 

@@ -69,11 +69,12 @@ DDE's
 
 **Quieter Host Recon:**
 ```
-echo %userdomain
-%echo %logonserver
-%echo %homepath
-%echo %homedrive
-%net share
+#cmd.exe
+echo %userdomain%
+echo %logonserver%
+echo %homepath%
+echo %homedrive%
+net share
 net accounts
 systeminfo
 tasklist /svc
@@ -81,6 +82,8 @@ gpresult /z
 net localgroup Administrators 
 netsh advfirewall show allprofilesstate
 systeminfo 
+
+#powershell
 $env:ComSpec
 $env:USERNAME
 $env:USERDOMAIN
@@ -88,9 +91,12 @@ $env:LOGONSERVER
 tree $home 
 ```
 
-***
-Get-EventLog -LogName "Application" | where {$_.Message -like '*username*' -or $_.Message -like '*password*' -or $_.Message -like '*pass*'} | select Message | format-table -wrap
 
+
+***
+```
+Get-EventLog -LogName "Application" | where {$_.Message -like '*username*' -or $_.Message -like '*password*' -or $_.Message -like '*pass*'} | select Message | format-table -wrap
+```
 
 
 ****

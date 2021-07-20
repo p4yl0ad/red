@@ -88,7 +88,7 @@ $env:ComSpec
 $env:USERNAME
 $env:USERDOMAIN
 $env:LOGONSERVER
-tree $home 
+tree /f $home 
 ```
 
 

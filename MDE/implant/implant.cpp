@@ -1,5 +1,6 @@
 #include "main.h"
 // Template from sektor7 MDE - reenz0h
+// Modified as needed by p4yl0ad
 
 // GUITrick WINDOWS application
 // Obfuscated API calls through AES api call encryption

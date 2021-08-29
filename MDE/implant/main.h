@@ -10,11 +10,7 @@
 #include <psapi.h>
 #include <tlhelp32.h>
 
-
-// pointer defs here
-////inject 
-
-//VirtualAllocEx
+//VirtualAllocEx - kernel32.dll
 LPVOID ( WINAPI * pVirtualAllocEx)(
   HANDLE hProcess,
   LPVOID lpAddress,
@@ -23,7 +19,7 @@ LPVOID ( WINAPI * pVirtualAllocEx)(
   DWORD  flProtect
 );
 
-//WriteProcessMemory
+//WriteProcessMemory - kernel32.dll
 BOOL ( WINAPI * pWriteProcessMemory)(
   HANDLE  hProcess,
   LPVOID  lpBaseAddress,
@@ -32,7 +28,7 @@ BOOL ( WINAPI * pWriteProcessMemory)(
   SIZE_T  *lpNumberOfBytesWritten
 );
 
-//CreateRemoteThread
+//CreateRemoteThread - kernel32.dll
 HANDLE ( WINAPI * pCreateRemoteThread)(
   HANDLE                 hProcess,
   LPSECURITY_ATTRIBUTES  lpThreadAttributes,
@@ -43,7 +39,7 @@ HANDLE ( WINAPI * pCreateRemoteThread)(
   LPDWORD                lpThreadId
 );
 
-//VirtualAlloc
+//VirtualAlloc - kernel32.dll
 LPVOID ( WINAPI * pVirtualAlloc)(
   LPVOID lpAddress,
   SIZE_T dwSize,
@@ -51,11 +47,33 @@ LPVOID ( WINAPI * pVirtualAlloc)(
   DWORD  flProtect
 );
 
+//RtlMoveMemory - Ntdll.dll
+VOID ( WINAPI * RtlMoveMemory)(
+  _Out_       VOID UNALIGNED *Destination,
+  _In_  const VOID UNALIGNED *Source,
+  _In_        SIZE_T         Length
+);
 
 
-/*
-RtlMoveMemory
-VirtualProtect
-OpenProcess
-CreateToolhelp32Snapshot
-*/
+//VirtualProtect - kernel32.dll 
+BOOL ( WINAPI * VirtualProtect)(
+  LPVOID lpAddress,
+  SIZE_T dwSize,
+  DWORD  flNewProtect,
+  PDWORD lpflOldProtect
+);
+
+
+//OpenProcess - kernel32.dll 
+HANDLE ( WINAPI * OpenProcess)(
+  DWORD dwDesiredAccess,
+  BOOL  bInheritHandle,
+  DWORD dwProcessId
+);
+
+
+//CreateToolhelp32Snapshot - kernel32.dll 
+HANDLE ( WINAPI * CreateToolhelp32Snapshot)(
+  DWORD dwFlags,
+  DWORD th32ProcessID
+);

@@ -2,6 +2,7 @@
 # payload encryption with AES
 # 
 # author: reenz0h (twitter: @sektor7net)
+# Modified: p4yl0ad
 
 import sys
 from Crypto.Cipher import AES

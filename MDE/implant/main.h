@@ -47,8 +47,14 @@ LPVOID ( WINAPI * pVirtualAlloc)(
   DWORD  flProtect
 );
 
+
+
+
+
+
+
 //RtlMoveMemory - Ntdll.dll
-VOID ( WINAPI * RtlMoveMemory)(
+VOID ( WINAPI * pRtlMoveMemory)(
   _Out_       VOID UNALIGNED *Destination,
   _In_  const VOID UNALIGNED *Source,
   _In_        SIZE_T         Length
@@ -56,24 +62,22 @@ VOID ( WINAPI * RtlMoveMemory)(
 
 
 //VirtualProtect - kernel32.dll 
-BOOL ( WINAPI * VirtualProtect)(
+BOOL ( WINAPI * pVirtualProtect)(
   LPVOID lpAddress,
   SIZE_T dwSize,
   DWORD  flNewProtect,
   PDWORD lpflOldProtect
 );
 
-
 //OpenProcess - kernel32.dll 
-HANDLE ( WINAPI * OpenProcess)(
+HANDLE ( WINAPI * pOpenProcess)(
   DWORD dwDesiredAccess,
   BOOL  bInheritHandle,
   DWORD dwProcessId
 );
 
-
 //CreateToolhelp32Snapshot - kernel32.dll 
-HANDLE ( WINAPI * CreateToolhelp32Snapshot)(
+HANDLE ( WINAPI * pCreateToolhelp32Snapshot)(
   DWORD dwFlags,
   DWORD th32ProcessID
 );

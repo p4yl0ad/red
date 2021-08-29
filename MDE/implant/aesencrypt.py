@@ -79,40 +79,16 @@ def obfus(ToObfus):
     Salias2 = "s" + alias2
     printunsigned(Salias2, keyname2, ciphertext2)
     
-    
-    ##pString = pointerApiCallToObfus+' = GetProcAddress(GetModuleHandle("kernel32.dll"), '+stringApiCallToObfus+');'
-    
-    
-    
     createpointerstring(alias, alias2) # sVAc , sk32
  
  
- 
-    """
-    ciphertext = aesenc(ToObfus, KEY)
-    
-    keyHexArr = 'key[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in KEY) + ' };'
-    
-    arrayname = getcap(ToObfus)
-    unsignedCharC = 'unsigned char '+arrayname+'[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in ciphertext) + ' };'
-    
-    AESdecstring = 'AESDecrypt((char *) '+arrayname+', sizeof('+arrayname+'), key, sizeof(key));'
-    pString = pointerApiCallToObfus+' = GetProcAddress(GetModuleHandle("kernel32.dll"), '+arrayname+');'
-    
-    #printkey(urandom(16))
-    #unsignedencstring = 'unsigned char '+stringApiCallToObfus+'[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in ApiCallToObfus) + ' };'
-    """
-    
-    
-    
-
-    
-#def libcalls(libAlias):
-#   if libAlias == "k":
-#        obfus("kernel32.dll")
-#        
-#    elif libAlias == "n":
-#        obfus("Ntdll.dll")
+def libcalls(libAlias):
+    if libAlias == "k":
+        obfus("kernel32.dll")
+        
+        
+    elif libAlias == "n":
+        obfus("Ntdll.dll")
         
         
  
@@ -121,6 +97,7 @@ def printkey(KEY, keyname):
     
     
 if __name__ == '__main__':
+    try:
         plaintext = open(sys.argv[1], "rb").read()
         payloadkey = urandom(16)
         ciphertext = aesenc(plaintext, payloadkey)
@@ -130,8 +107,8 @@ if __name__ == '__main__':
         
         
         obfus("VirtualAlloc")
-        # do function encrypts + key here
         
-    #except:
-    #    print("File argument needed! %s <raw payload file>" % sys.argv[0])
-    #    sys.exit()
+    except Exception as e:
+        #print(e)
+        print("File argument needed! %s <raw payload file>" % sys.argv[0])
+        sys.exit()

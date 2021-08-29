@@ -41,25 +41,14 @@ unsigned int calc_len = sizeof(calc_payload);
 
 def obfuser(ApiCallToObfus):
 
-    
-    # e.g.
-    #obfuser("VirtualAllocEx")
-    #-> stringApiCallToObfus = "s" + ApiCallToObfus
-    #-> pointerApiCallToObfus = "p" + ApiCallToObfus
-    
-    
     stringApiCallToObfus = "s" + ApiCallToObfus
     pointerApiCallToObfus = "p" + ApiCallToObfus
     
-    
     unsignedencstring = 'unsigned char '+stringApiCallToObfus+' = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in ApiCallToObfus) + ' };'
     AESdecstring = 'AESDecrypt((char *) '+stringApiCallToObfus+', sizeof('+stringApiCallToObfus+'), key, sizeof(key));	'
-    pString = 'pVirtualAllocEx = GetProcAddress(GetModuleHandle("kernel32.dll"), sVirtualAllocEx);'
+    pString = pointerApiCallToObfus+' = GetProcAddress(GetModuleHandle("kernel32.dll"), '+stringApiCallToObfus+');'
     
-    
-    
-    
-    return unsignedencstring,AESdecstring
+    return unsignedencstring,AESdecstring,pString
     
     
     
@@ -104,3 +93,4 @@ sCreateToolhelp32Snapshot = "CreateToolhelp32Snapshot"
 print("")
 print(obfuser("VirtualAllocEx")[0])
 print(obfuser("VirtualAllocEx")[1])
+print(obfuser("VirtualAllocEx")[2])

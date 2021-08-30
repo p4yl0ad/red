@@ -51,12 +51,8 @@ def keyloops():
             prepend = (e.rstrip("\n")[0:3] + getcap(e.rstrip("\n")))
             print("unsigned char " + "k" + prepend + '[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in LOOPKEY) + ' };')
             print("unsigned char " + "s" + prepend + '[] = { 0x' + ', 0x'.join(hex(ord(x))[2:] for x in e.rstrip("\n")) + ' };')
-            #unsigned char kVAEx[] = { 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36 };
-            #unsigned char sVAEx[] = { 0x3c, 0xb5, 0x6f, 0xac, 0x69, 0xb3, 0x6d, 0x18, 0x59, 0x7f, 0xcc, 0xc1, 0x4e, 0x8c, 0x39, 0xd6 };
             print("AESDecrypt((char *) "+"s" + prepend+", sizeof("+"s" + prepend+"), "+"k" + prepend+", sizeof("+"k" + prepend+"));")
-            #AESDecrypt((char *) sVAEx, sizeof(sVAEx), kVAEx, sizeof(kVAEx));
             print("p" + prepend + " = GetProcAddress(GetModuleHandle(\"kernel32.dll\")," + "s" + prepend + ");")
-            #pVirtualAllocEx = GetProcAddress(GetModuleHandle("kernel32.dll"), sVAEx);
 
 
 

